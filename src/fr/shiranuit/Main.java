@@ -13,18 +13,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-//        URL url = new URL("https://next-docs.kuzzle.io/core/1/guides/getting-started/running-kuzzle/");
-//        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-//        connection.setInstanceFollowRedirects(true);
-//        connection.setRequestMethod("GET");
-//
-//        connection.getResponseCode();
-//
-//        for (String link : Crawler.getLinks(connection)) {
-//            System.out.println(link);
-//        }
-
-        Crawler crawler = new Crawler("https://next-docs.kuzzle.io/core/1/guides/getting-started/running-kuzzle/");
+        Crawler crawler = new Crawler("https://kuzzle.io/", new String[] {
+                "kuzzle.io",
+                "dl.kuzzle.io",
+                "docs.kuzzle.io",
+                "info.kuzzle.io",
+                "blog.kuzzle.io",
+        });
         crawler.run();
     }
 }

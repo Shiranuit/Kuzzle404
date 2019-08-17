@@ -20,4 +20,10 @@ public class UniqueQueue <T> extends LinkedBlockingQueue {
     public T pop() {
         return (T)super.poll();
     }
+
+    @Override
+    public void clear() {
+        super.clear();
+        unique.clear();
+    }
 }
